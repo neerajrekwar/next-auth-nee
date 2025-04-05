@@ -36,38 +36,3 @@ export default async function Home() {
   );
 }
  
-function SignOutButton() {
-  return (
-    <Form
-      action={async () => {
-        "use server";
-        await signOut();
-      }}
-    >
-      <button
-        className="bg-slate-800 w-full hover:bg-slate-700 text-gray-100 font-bold py-2 px-4 rounded"
-        type="submit"
-      >
-        Sign out
-      </button>
-    </Form>
-  );
-}
- 
-function SignInButton() {
-  return (
-    <Form
-      action={async () => {
-        "use server";
-        await signIn("github", { redirectTo: "/" });
-      }}
-    >
-      <button
-        className="bg-slate-800 hover:bg-slate-700 text-gray-100 font-bold py-2 px-4 rounded"
-        type="submit"
-      >
-        Sign in with GitHub
-      </button>
-    </Form>
-  );
-}
