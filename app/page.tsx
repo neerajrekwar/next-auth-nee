@@ -1,7 +1,6 @@
 
 import { auth } from "@/auth";
 import { SignIn, SignOut } from "@/components/auth-comp";
-import Form from "next/form";
  
 export default async function Home() {
   const session = await auth();
